@@ -107,6 +107,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 body {
@@ -329,7 +330,6 @@ blockquote {
 .nav--transparent .nav__link:hover { color: white; }
 
 .nav__link--find-help {
-  color: var(--color-accent) !important;
   font-weight: 600;
 }
 
@@ -402,7 +402,6 @@ blockquote {
 }
 
 .mobile-nav__link:hover { color: var(--color-accent-light); }
-.mobile-nav__link--find-help { color: var(--color-accent-light); }
 
 /* --------------------------------------------------------------------------
    6. BUTTONS & CTAs
@@ -1662,8 +1661,16 @@ blockquote {
   .help-detail__prayer { padding: var(--space-6); }
 
   /* Welcome section two-column → single column */
-  .welcome-grid { grid-template-columns: 1fr !important; }
+  .welcome-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
   .welcome-visual { display: none !important; }
+
+  /* Pastor name badge — prevent overflow on mobile */
+  .pastor-quote {
+    position: static !important;
+    display: block;
+    margin-top: 16px;
+    border-radius: 12px !important;
+  }
 
   /* Event cards stack */
   .event-card { flex-direction: column; }
