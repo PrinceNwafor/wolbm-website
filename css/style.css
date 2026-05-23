@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    WORD OF LIFE BIBLE MINISTRY — MASTER STYLESHEET
    Brand Colors: Flame Red, Burning Orange, Golden Amber
    ========================================================================== */
@@ -329,7 +329,8 @@ blockquote {
 
 .nav--transparent .nav__link:hover { color: white; }
 
-.nav__link--find-help {
+.nav__link--sermons {
+  color: var(--color-accent) !important;
   font-weight: 600;
 }
 
